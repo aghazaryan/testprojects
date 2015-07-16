@@ -29,7 +29,7 @@ public class First {
     }
 
     public void delete(String pattern) {
-
+        System.out.println("Hello");
 
         keys.addAll(jedis.keys(pattern));
 
