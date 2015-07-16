@@ -29,7 +29,7 @@ public class First {
     }
 
     public void delete(String pattern) {
-        System.out.println("Hello");
+      //  System.out.println("Hello");
 
         keys.addAll(jedis.keys(pattern));
 
@@ -45,7 +45,10 @@ public class First {
             }
             pipeline.sync();
         }
+    }
 
+    public void disconnect(){
+        jedis.close();
     }
 
 }
